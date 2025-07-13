@@ -1,0 +1,284 @@
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Shield, Smartphone, Download, Star, Users, Zap } from "lucide-react"
+
+export default function LandingPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-yellow-100">
+      {/* Header */}
+      <header className="container mx-auto px-4 py-6">
+        <nav className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <span className="text-2xl font-bold text-gray-900">ChatCub</span>
+          </div>
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Home
+            </a>
+            <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              About
+            </a>
+            <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Features
+            </a>
+            <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Contact
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section id="home" className="container mx-auto px-4 py-16 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            Chat Safely with
+            <span className="text-blue-600"> AI Protection</span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Experience messaging like never before with intelligent content filtering and an interface designed for
+            everyone.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
+              <Download className="mr-2 h-5 w-5" />
+              Download Now
+            </Button>
+            <Button variant="outline" size="lg" className="px-8 py-4 text-lg bg-transparent">
+              <a href="#features" className="flex items-center">
+                Learn More
+              </a>
+            </Button>
+          </div>
+          <div className="flex items-center justify-center mt-8 space-x-6 text-sm text-gray-500">
+            <div className="flex items-center">
+              <Star className="h-4 w-4 text-yellow-400 mr-1" />
+              <span>4.9/5 Rating</span>
+            </div>
+            <div className="flex items-center">
+              <Users className="h-4 w-4 mr-1" />
+              <span>100K+ Users</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section id="about" className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">About Us</h2>
+            <p className="text-xl text-gray-600 mb-8">
+              At ChatCub, we understand the importance of providing a secure platform for young users. Our goal is to
+              empower kids and teens to communicate freely without fear while cultivating a positive online environment.
+              By prioritizing safety and engagement, we strive to redefine digital communication for younger
+              generations.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="text-center">
+                <div className="mx-auto mb-4 p-3 bg-blue-100 rounded-full w-fit">
+                  <Shield className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Safety First</h3>
+                <p className="text-gray-600">
+                  Our primary mission is to create the safest messaging platform for users of all ages.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="mx-auto mb-4 p-3 bg-green-100 rounded-full w-fit">
+                  <Users className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Community Driven</h3>
+                <p className="text-gray-600">
+                  We listen to our users and continuously improve based on community feedback.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="mx-auto mb-4 p-3 bg-purple-100 rounded-full w-fit">
+                  <Zap className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Innovation</h3>
+                <p className="text-gray-600">
+                  Cutting-edge AI technology powers our content filtering and safety features.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose ChatCub?</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Built with cutting-edge technology to provide the safest and most intuitive messaging experience.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {/* Safe Mode Feature */}
+          <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <CardHeader className="text-center pb-4">
+              <div className="mx-auto mb-4 p-3 bg-blue-100 rounded-full w-fit">
+                <Shield className="h-8 w-8 text-blue-600" />
+              </div>
+              <CardTitle className="text-2xl font-bold text-gray-900">AI-Powered Safe Mode</CardTitle>
+              <CardDescription className="text-lg text-gray-600">
+                Advanced content filtering tailored to your age
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-gray-700 mb-6">
+                Our intelligent AI system automatically filters inappropriate messages based on your age settings,
+                ensuring a safe and comfortable messaging environment for users of all ages.
+              </p>
+              <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
+                <div className="flex items-center">
+                  <Zap className="h-4 w-4 mr-1 text-green-500" />
+                  <span>Real-time filtering</span>
+                </div>
+                <div className="flex items-center">
+                  <Shield className="h-4 w-4 mr-1 text-blue-500" />
+                  <span>Age-appropriate</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* User Friendly Interface */}
+          <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <CardHeader className="text-center pb-4">
+              <div className="mx-auto mb-4 p-3 bg-green-100 rounded-full w-fit">
+                <Smartphone className="h-8 w-8 text-green-600" />
+              </div>
+              <CardTitle className="text-2xl font-bold text-gray-900">User-Friendly Interface</CardTitle>
+              <CardDescription className="text-lg text-gray-600">Intuitive design that anyone can use</CardDescription>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-gray-700 mb-6">
+                Experience seamless communication with our thoughtfully designed interface. Clean, simple, and
+                accessible - making it easy for users of all technical backgrounds to stay connected.
+              </p>
+              <div className="flex items-center justify-center space-x-4 text-sm text-gray-500">
+                <div className="flex items-center">
+                  <Smartphone className="h-4 w-4 mr-1 text-purple-500" />
+                  <span>Mobile optimized</span>
+                </div>
+                <div className="flex items-center">
+                  <Star className="h-4 w-4 mr-1 text-yellow-500" />
+                  <span>Easy to use</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Contact Us Section */}
+      <section id="contact" className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
+              <p className="text-xl text-gray-600">
+                Have questions or need support? We're here to help you get the most out of ChatCub.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <div className="p-2 bg-green-100 rounded-lg mr-4">
+                      <Users className="h-5 w-5 text-green-600" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900">General Inquiries</p>
+                      <p className="text-gray-600">hey@chatcub.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <form className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      rows={4}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="How can we help you?"
+                    ></textarea>
+                  </div>
+                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+                    Send Message
+                  </Button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-600 text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-4">Ready to Start Chatting Safely?</h2>
+          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+            Join thousands of users who trust ChatCub for secure, age-appropriate messaging.
+          </p>
+          <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg">
+            <Download className="mr-2 h-5 w-5" />
+            Download ChatCub Now
+          </Button>
+          <p className="text-sm text-blue-200 mt-4">Available for iOS and Android • Free to download</p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-2 mb-4 md:mb-0">
+              <span className="text-xl font-bold">ChatCub</span>
+            </div>
+            <div className="text-right text-sm text-gray-400">
+              <p className="font-medium text-white">(747) 277-7122</p>
+              <p>Los Angeles, CA</p>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 ChatCub. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
